@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-density="regular">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shreyas Achary — Data Scientist & Power Platform Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Shreyas Achary — home">
+      <span class="mark">SA</span>
+      <span class="who">
+        Shreyas Achary
+        <small>Data Scientist · Power Platform Dev</small>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work"><span class="n">01</span>Work</a>
+      <a href="#skills"><span class="n">02</span>Stack</a>
+      <a href="#experience"><span class="n">03</span>Experience</a>
+      <a href="#contact"><span class="n">04</span>Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle light / dark">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary" href="#contact">Get in touch <span class="arr">↗</span></a>
+      <button class="icon-btn nav-burger" id="burger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero wrap" id="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="status reveal"><span class="dot"></span> Available for new roles &amp; contracts — Q3 2026</span>
+      <h1 class="reveal" data-d="1">I build the <span class="grad">models</span> and the <span class="grad">tools</span> that turn data into decisions.</h1>
+      <p class="lede reveal" data-d="2">I'm Shreyas — a data scientist and Power Platform developer. I ship ML and RAG systems, and low-code apps that have run audits, onboarding and analytics for enterprise teams at Unilever and beyond.</p>
+      <div class="hero-cta reveal" data-d="3">
+        <a class="btn btn-primary" href="#work">View selected work <span class="arr">↗</span></a>
+        <a class="btn btn-ghost" href="#contact">Get in touch <span class="arr">↗</span></a>
+      </div>
+      <div class="hero-meta reveal" data-d="4">
+        <div class="m"><b data-count="5000" data-suffix="+" data-thousands="1">0</b><span>employees served</span></div>
+        <div class="m"><b data-count="90" data-suffix="%">0</b><span>model accuracy</span></div>
+        <div class="m"><b data-count="9" data-suffix="+">0</b><span>projects shipped</span></div>
+      </div>
+    </div>
+
+    <!-- live dashboard card -->
+    <div class="hero-panel reveal" data-d="2">
+      <div class="panel">
+        <div class="panel-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="file">model_eval.ipynb</span>
+          <span class="live"><i></i> RUNNING</span>
+        </div>
+        <div class="panel-body">
+          <div class="kpis">
+            <div class="kpi" data-c="1"><div class="lab">LDA acc.</div><div class="val">90.0<small>%</small></div></div>
+            <div class="kpi" data-c="1"><div class="lab">RF R²</div><div class="val">0.47<small>▲</small></div></div>
+            <div class="kpi" data-c="1"><div class="lab">BMI RMSE</div><div class="val">3.23<small>▼</small></div></div>
+          </div>
+          <div class="chart-card">
+            <div class="ch-head">
+              <span class="t">predicted vs actual · holdout</span>
+              <span class="chart-legend"><span class="a">predicted</span><span class="b">actual</span></span>
+            </div>
+            <svg class="linechart" id="heroLine" viewBox="0 0 320 132" preserveAspectRatio="none" aria-hidden="true"></svg>
+          </div>
+          <div class="chart-card">
+            <div class="ch-head"><span class="t">variance explained · PCA</span><span class="t" style="color:var(--text-3)">per comp</span></div>
+            <div class="bars" id="heroBars"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="wrap" id="stats">
+  <div class="stats">
+    <div class="stat reveal">
+      <b data-count="5000" data-suffix="+" data-thousands="1">0</b>
+      <div class="cap">employees onboarded through automation I built</div>
+      <svg class="spark" viewBox="0 0 120 26" preserveAspectRatio="none" data-spark="8,20 24,16 40,18 56,11 72,13 88,7 104,9 118,3"></svg>
+    </div>
+    <div class="stat reveal" data-d="1">
+      <b data-count="25" data-suffix="%">0</b>
+      <div class="cap">shorter audit cycle (8→6 wks) across 3 APAC regions</div>
+      <svg class="spark" viewBox="0 0 120 26" preserveAspectRatio="none" data-spark="6,4 22,9 38,7 54,13 70,11 86,17 102,15 118,21"></svg>
+    </div>
+    <div class="stat reveal" data-d="2">
+      <b data-count="12" data-suffix="%">0</b>
+      <div class="cap">customer churn reduction from RFM segmentation</div>
+      <svg class="spark" viewBox="0 0 120 26" preserveAspectRatio="none" data-spark="6,21 22,17 38,18 54,12 70,13 86,8 102,7 118,2"></svg>
+    </div>
+    <div class="stat reveal" data-d="3">
+      <b data-count="40" data-suffix="%">0</b>
+      <div class="cap">faster time-to-answer on priority dashboards</div>
+      <svg class="spark" viewBox="0 0 120 26" preserveAspectRatio="none" data-spark="6,21 22,17 38,18 54,12 70,13 86,8 102,7 118,2"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="wrap" id="skills">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow"><span class="tick">/</span> 02 — Capabilities</span>
+      <h2 class="reveal">The stack I build with</h2>
+    </div>
+    <span class="idx mono reveal">data science × low-code</span>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-cats">
+      <div class="skill-cat reveal">
+        <div class="ct">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v4M16 3v4M4 11h16M5 7h14a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/></svg></span>
+          <h3>Data Science &amp; ML</h3>
+          <span class="num">09</span>
+        </div>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span>
+          <span class="chip">SHAP</span><span class="chip">statsmodels</span><span class="chip">PCA / LDA</span><span class="chip">imbalanced-learn</span><span class="chip">MLflow</span><span class="chip">R</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal" data-d="1">
+        <div class="ct">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1 0 4 3 3 0 0 1-2 5 3 3 0 0 1-6 0 3 3 0 0 1-2-5 3 3 0 0 1 0-4 3 3 0 0 1 2-5 3 3 0 0 1 3-3z"/><path d="M12 8v8M9 12h6"/></svg></span>
+          <h3>GenAI &amp; Agentic Systems</h3>
+          <span class="num">05</span>
+        </div>
+        <div class="chips">
+          <span class="chip">LangGraph</span><span class="chip">LangChain</span><span class="chip">RAG</span>
+          <span class="chip">FAISS</span><span class="chip">pgvector</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal" data-d="2">
+        <div class="ct">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg></span>
+          <h3>Power Platform &amp; BI</h3>
+          <span class="num">07</span>
+        </div>
+        <div class="chips">
+          <span class="chip">Power Apps</span><span class="chip">Power Automate</span><span class="chip">Power BI</span>
+          <span class="chip">Power Fx</span><span class="chip">SharePoint</span><span class="chip">Dataverse</span><span class="chip">Tableau</span>
+        </div>
+      </div>
+      <div class="skill-cat reveal" data-d="2">
+        <div class="ct">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 17.6A4.4 4.4 0 0 0 17.5 9h-1.3A6.5 6.5 0 1 0 5 15.3"/><path d="M8 17l4 4 4-4M12 12v9"/></svg></span>
+          <h3>Data, Cloud &amp; MLOps</h3>
+          <span class="num">08</span>
+        </div>
+        <div class="chips">
+          <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span>
+          <span class="chip">AWS (SageMaker)</span><span class="chip">Azure Functions</span><span class="chip">Docker</span><span class="chip">Streamlit</span><span class="chip">FastAPI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="profic reveal" data-d="1">
+      <h3>Where I go deep</h3>
+      <div class="sub">self-assessed · shipped in production</div>
+      <div class="pbar"><div class="pl"><span>Python / ML modeling</span><span class="pv">expert</span></div><div class="track"><div class="fill" data-w="93"></div></div></div>
+      <div class="pbar"><div class="pl"><span>Power Apps / Power Fx</span><span class="pv">expert</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="pbar"><div class="pl"><span>Power BI / SQL</span><span class="pv">advanced</span></div><div class="track"><div class="fill" data-w="88"></div></div></div>
+      <div class="pbar"><div class="pl"><span>RAG / LangGraph</span><span class="pv">advanced</span></div><div class="track"><div class="fill" data-w="82"></div></div></div>
+      <div class="pbar"><div class="pl"><span>R / statistical modeling</span><span class="pv">advanced</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+      <div class="pbar"><div class="pl"><span>Cloud / MLOps</span><span class="pv">proficient</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="wrap" id="work">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow"><span class="tick">/</span> 01 — Selected work</span>
+      <h2 class="reveal">Case studies</h2>
+    </div>
+    <span class="idx mono reveal">06 projects · click to expand</span>
+  </div>
+  <div class="proj-grid" id="projGrid"><!-- cards injected by JS --></div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="wrap" id="experience">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow"><span class="tick">/</span> 03 — Track record</span>
+      <h2 class="reveal">Experience</h2>
+    </div>
+    <span class="idx mono reveal">2021 → 2024 → 2025 → present</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-when">Sept 2025 – Feb 2026<span class="now">RECENT</span></div>
+      <div class="tl-main">
+        <div class="tl-role">Data &amp; Analytics Intern · <span class="tl-co">Tepiche International</span></div>
+        <p class="tl-desc">Delivered production KPI and operations dashboards (SQL + Power BI) for sales, orders, churn and inventory, and handled ~5–7 ad-hoc analyses a week. Cut time-to-answer on priority dashboards ~40% via SQL optimisation, and ran an RFM segmentation on 12 months of transactions that informed promotions reducing churn 12%.</p>
+        <div class="tl-tags"><span>SQL</span><span>Power BI</span><span>RFM</span><span>Tableau</span></div>
+      </div>
+    </div>
+    <div class="tl-item reveal" data-d="1">
+      <div class="tl-when">Oct 2021 – Aug 2024</div>
+      <div class="tl-main">
+        <div class="tl-role">Software Engineer · <span class="tl-co">LTIMindtree — client: Unilever</span></div>
+        <p class="tl-desc">Delivered Power Platform solutions across Unilever's audit, legal, HR and employee-experience functions — canvas apps, Power Automate flows and embedded Power BI on SharePoint and SQL Server. Shipped the audit tracker (8→6 wk cycle, 3 APAC regions), a global exception tracker (6→4 wk), onboarding automation for ~5,000 staff, and Unilever UK's first internal podcast app.</p>
+        <div class="tl-tags"><span>Power Apps</span><span>Power Automate</span><span>Power BI</span><span>SQL Server</span><span>React</span><span>Azure</span></div>
+      </div>
+    </div>
+    <div class="tl-item reveal" data-d="2">
+      <div class="tl-when">Independent</div>
+      <div class="tl-main">
+        <div class="tl-role">Data Science &amp; GenAI · <span class="tl-co">Self-directed projects</span></div>
+        <p class="tl-desc">Built RepoDoc AI — a RAG/LangGraph documentation agent live on Streamlit — plus multivariate and ML studies: pressure-sensor posture classification at 90% LDA accuracy, and wine-quality modelling across 6,497 samples. Sharpened retrieval design, calibration and leakage-safe evaluation.</p>
+        <div class="tl-tags"><span>LangGraph</span><span>FAISS</span><span>scikit-learn</span><span>R</span><span>Streamlit</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="wrap contact" id="contact">
+  <span class="eyebrow reveal"><span class="tick">/</span> 04 — Contact</span>
+  <h2 class="reveal" data-d="1">Let's build something that <em>moves the number.</em></h2>
+  <p class="lede reveal" data-d="2">Open to data science and Power Platform roles, contracts, and the occasional interesting analytics problem. Fastest way to reach me is email.</p>
+  <div class="contact-cta reveal" data-d="3">
+    <a class="btn btn-primary" href="mailto:shreyasacharya8@gmail.com">shreyasacharya8@gmail.com <span class="arr">↗</span></a>
+    <a class="btn btn-ghost" href="#top">Back to top <span class="arr">↗</span></a>
+  </div>
+  <div class="socials reveal" data-d="3">
+    <a href="https://www.linkedin.com/in/shreyas-sadashiva-achary/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.32-2.02-3.32-2.02 0-2.33 1.58-2.33 3.21V21h-4z"/></svg></a>
+    <a href="https://github.com/ShreyasSadashiva" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+    <a href="mailto:shreyasacharya8@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="mono">© 2026 Shreyas Achary · Built from scratch, no templates</span>
+    <a class="top-link" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- project modal -->
+<div class="modal-scrim" id="scrim"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-head">
+    <span class="k" id="modalKicker">Case study</span>
+    <h3 id="modalTitle">Project</h3>
+    <div class="tools" id="modalTools"></div>
+    <button class="icon-btn modal-close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="modal-body" id="modalBody"></div>
+</div>
+
+<!-- scripts -->
+<script src="portfolio.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>
